@@ -5,4 +5,4 @@ $(document).ready ->
     tabSize: 2
     lineNumbers: true
   }
-  editor = CodeMirror.fromTextArea(document.getElementById("canvas-tag"), htmlOptions)
+  $("textarea.html").each -> CodeMirror.fromTextArea($(this)[0], htmlOptions)
