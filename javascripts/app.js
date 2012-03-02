@@ -3,13 +3,12 @@
   $(document).ready(function() {
     var coffeescriptOptions, htmlOptions;
     coffeescriptOptions = {
-      mode: 'text/x-coffeescript',
+      mode: 'coffeescript',
       tabMode: 'indent',
-      tabSize: 2,
-      lineNumbers: true
+      tabSize: 2
     };
     htmlOptions = {
-      mode: 'text/html',
+      mode: 'html',
       tabMode: 'indent',
       tabSize: 2,
       lineNumbers: true

@@ -3,7 +3,6 @@ $(document).ready ->
     mode: 'coffeescript'
     tabMode: 'indent'
     tabSize: 2
-    lineNumbers: true
   }
   htmlOptions = {
     mode: 'html'
