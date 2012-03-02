@@ -1,12 +1,12 @@
 $(document).ready ->
   coffeescriptOptions = {
-    mode: 'text/x-coffeescript'
+    mode: 'coffeescript'
     tabMode: 'indent'
     tabSize: 2
     lineNumbers: true
   }
   htmlOptions = {
-    mode: 'text/html'
+    mode: 'html'
     tabMode: 'indent'
     tabSize: 2
     lineNumbers: true
