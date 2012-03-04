@@ -2,9 +2,9 @@
 <html lang='en'>
 <head>
   <title>Coffeescript Powered Canvas</title>
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
   <link rel="stylesheet" href="codemirror/codemirror.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="stylesheets/application.css">
 </head>
 <body><div class="container">
-<section>
+
+<section id="section0">
   <div class="page-header">
     <h3>Introduction</h3>
   </div>
@@ -34,19 +35,25 @@
   </div>
   <div class="row">
     <div class="span8">
-      <div class="alert alert-success"><i class="icon-ok"></i> Successfully compiles</div>
-<form class="prettyprint"><textarea class="coffeescript">
-canvas = document.getElementById('canvas-context')
-context = canvas.getContext('2d')
+      <div id="alert1" class="alert alert-success"><i class='icon-ok'></i> Successfully Compiled</div>
+
+<form class="prettyprint"><textarea class="coffeescript" data-alert="#alert1">
+canvas = document.getElementById 'canvas-rectangle'
+if canvas.getContext
+  ctx = canvas.getContext '2d'
+  ctx.fillStyle = "rgb(185,74,72)"
+  ctx.fillRect(75, 75, 150, 150)
+
 </textarea></form>
+
     </div>
     <div class="span4">
-      <div class="alert alert-info">#canvas-context</div>
-      <canvas id="canvas-context" style="border: 1px solid #333"></canvas>
+      <div class="alert alert-info">#canvas-rectangle</div>
+      <canvas id="canvas-rectangle" style="border: 1px solid #333" height="296" width="296"></canvas>
     </div>
   </div>
 </section>
-<section>
+<section id="section1">
   <div class="page-header">
     <h3>Part 2</h3>
   </div>
