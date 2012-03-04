@@ -1,12 +1,8 @@
 (function() {
-  var coffeescriptOptions, compile, htmlOptions;
+  var coffeescriptOptions, compile, htmlOptions, realTimeCompile;
 
-  compile = function(editor, keyEvent) {
-    var alertDiv, javascript, source, _ref;
-    if (keyEvent.type !== "keyup") return;
-    if ((_ref = keyEvent.keyCode) === 16 || _ref === 37 || _ref === 38 || _ref === 39 || _ref === 40) {
-      return;
-    }
+  compile = function(editor) {
+    var alertDiv, javascript, source;
     alertDiv = $(editor.getTextArea()).data('alert');
     source = editor.getValue();
     try {
@@ -20,12 +16,21 @@
     }
   };
 
+  realTimeCompile = function(editor, keyEvent) {
+    var _ref;
+    if (keyEvent.type !== "keyup") return;
+    if ((_ref = keyEvent.keyCode) === 16 || _ref === 37 || _ref === 38 || _ref === 39 || _ref === 40) {
+      return;
+    }
+    return compile(editor);
+  };
+
   coffeescriptOptions = {
     mode: 'coffeescript',
     tabMode: 'indent',
     tabSize: 2,
     onKeyEvent: function(editor, keyEvent) {
-      return compile(editor, $.event.fix(keyEvent));
+      return realTimeCompile(editor, $.event.fix(keyEvent));
     }
   };
 
@@ -39,7 +44,8 @@
   $(document).ready(function() {
     $("textarea.coffeescript").each(function() {
       var editor;
-      return editor = CodeMirror.fromTextArea($(this)[0], coffeescriptOptions);
+      editor = CodeMirror.fromTextArea($(this)[0], coffeescriptOptions);
+      return compile(editor);
     });
     return $("textarea.html").each(function() {
       return CodeMirror.fromTextArea($(this)[0], htmlOptions);
