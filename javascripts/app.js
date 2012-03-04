@@ -42,13 +42,10 @@
   };
 
   $(document).ready(function() {
-    $("textarea.coffeescript").each(function() {
+    return $("textarea.coffeescript").each(function() {
       var editor;
       editor = CodeMirror.fromTextArea($(this)[0], coffeescriptOptions);
       return compile(editor);
-    });
-    return $("textarea.html").each(function() {
-      return CodeMirror.fromTextArea($(this)[0], htmlOptions);
     });
   });
 

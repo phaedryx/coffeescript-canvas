@@ -31,6 +31,3 @@ $(document).ready ->
   $("textarea.coffeescript").each ->
     editor = CodeMirror.fromTextArea($(this)[0], coffeescriptOptions)
     compile(editor)
-
-  $("textarea.html").each ->
-    CodeMirror.fromTextArea($(this)[0], htmlOptions)

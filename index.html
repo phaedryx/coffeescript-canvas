@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-  <title>Coffeescript Powered Canvas</title>
+  <title>Coffeescript Canvas</title>
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -11,9 +11,24 @@
   <link rel="stylesheet" href="bootstrap/css/prettify.css">
   <link rel="stylesheet" href="stylesheets/application.css">
 </head>
-<body><div class="container">
+<body data-spy="scroll" data-target=".subnav" data-offset="50"><div class="container">
 
-<section>
+<header class="subhead" id="overview">
+  <div class="subnav">
+    <ul class="nav nav-pills">
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#canvas-element">The Canvas Element</a></li>
+      <li><a href="#rectangles">Rectangles</a></li>
+      <li><a href="#strokes-fills-shadows">Strokes, Fills, and Shadows</a></li>
+      <li><a href="#text">Text</a></li>
+      <li><a href="#paths">Paths</a></li>
+      <li><a href="#transformations">Transformations</a></li>
+      <li><a href="#composites">Composites</a></li>
+    </ul>
+  </div>
+</header>
+
+<section id="introduction">
   <div class="page-header">
     <h3>Introduction</h3>
   </div>
@@ -30,7 +45,7 @@
     </div>
   </div>
 </section>
-<section>
+<section id="canvas-element">
   <div class="page-header">
     <h3>The Canvas Element</h3>
   </div>
@@ -47,7 +62,7 @@
     </div>
   </div>
 </section>
-<section>
+<section id="rectangles">
   <div class="page-header">
     <h3>Rectangles</h3>
   </div>
@@ -104,7 +119,7 @@ if canvas.getContext
     </div>
   </div>
 </section>
-<section>
+<section id="strokes-fills-shadows">
   <div class="page-header">
     <h3>Strokes, Fills, and Shadows</h3>
   </div>
@@ -121,7 +136,7 @@ if canvas.getContext
     </div>
   </div>
 </section>
-<section>
+<section id="text">
   <div class="page-header">
     <h3>Text</h3>
   </div>
@@ -145,17 +160,17 @@ if canvas.getContext
     </div>
   </div>
 </section>
-<section>
+<section id="paths">
   <div class="page-header">
     <h3>Paths</h3>
   </div>
 </section>
-<section>
+<section id="transformations">
   <div class="page-header">
     <h3>Transformations</h3>
   </div>
 </section>
-<section>
+<section id="composites">
   <div class="page-header">
     <h3>Composites</h3>
   </div>
@@ -165,10 +180,7 @@ if canvas.getContext
 <script type="text/javascript" src="lib/coffee-script.js"></script>
 <script type="text/javascript" src="codemirror/codemirror.js"></script>
 <script type="text/javascript" src="codemirror/coffeescript.js"></script>
-<script type="text/javascript" src="codemirror/xml.js"></script>
-<script type="text/javascript" src="codemirror/javascript.js"></script>
-<script type="text/javascript" src="codemirror/css.js"></script>
-<script type="text/javascript" src="codemirror/htmlmixed.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="javascripts/app.js"></script>
 
 </div></body>
