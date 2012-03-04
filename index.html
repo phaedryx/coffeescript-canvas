@@ -13,7 +13,7 @@
 </head>
 <body><div class="container">
 
-<section id="section0">
+<section>
   <div class="page-header">
     <h3>Introduction</h3>
   </div>
@@ -25,37 +25,62 @@
         Mauris pretium sem euismod nibh accumsan sollicitudin. Pellentesque egestas 
         malesuada fermentum. Praesent rutrum mollis sem, vitae placerat lorem ultricies 
         faucibus. Nullam pharetra, est nec gravida aliquam, erat enim ullamcorper augue, 
-        in tempus nisl quam vel orci. Aliquam a nibh a risus eleifend vehicula. Ut 
-        malesuada commodo justo, ut bibendum risus semper nec. Nullam dignissim varius 
-        augue a gravida. Donec placerat elit id odio condimentum adipiscing. Praesent sem 
-        nisi, bibendum sit amet commodo eget, pulvinar sit amet dolor. Suspendisse mi 
-        magna, placerat in bibendum at, facilisis ac ante.
+        in tempus nisl quam vel orci. Aliquam a nibh a risus eleifend vehicula.
+      </p>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="page-header">
+    <h3>The Canvas Element</h3>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pellentesque 
+        sem sed elit blandit id fringilla nibh tincidunt. Quisque mattis dapibus aliquet. 
+        Mauris pretium sem euismod nibh accumsan sollicitudin. Pellentesque egestas 
+        malesuada fermentum. Praesent rutrum mollis sem, vitae placerat lorem ultricies 
+        faucibus. Nullam pharetra, est nec gravida aliquam, erat enim ullamcorper augue, 
+        in tempus nisl quam vel orci. Aliquam a nibh a risus eleifend vehicula.        
+      </p>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="page-header">
+    <h3>Rectangles</h3>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <p>
+        A few words about drawing rectangles.
       </p>
     </div>
   </div>
   <div class="row">
     <div class="span8">
-      <div id="alert1" class="alert alert-success"><i class='icon-ok'></i> Successfully Compiled</div>
+      <div id="alert-simple-rectangle" class="alert alert-success"><i class='icon-ok'></i> Successfully Compiled</div>
 
-<form class="prettyprint"><textarea class="coffeescript" data-alert="#alert1">
-canvas = document.getElementById 'canvas-rectangle'
+<form class="prettyprint"><textarea class="coffeescript" data-alert="#alert-simple-rectangle">
+canvas = document.getElementById 'canvas-simple-rectangle'
 if canvas.getContext
   ctx = canvas.getContext '2d'
   ctx.fillStyle = "rgb(185,74,72)"
-  ctx.fillRect(80, 80, 136, 136)
+  ctx.fillRect(74, 74, 150, 150)
 
 </textarea></form>
 
     </div>
     <div class="span4">
-      <div class="alert alert-info">#canvas-rectangle</div>
-      <canvas id="canvas-rectangle" style="border: 1px solid #333" height="296" width="296"></canvas>
+      <div class="alert alert-info">#canvas-simple-rectangle</div>
+      <canvas id="canvas-simple-rectangle" height="298" width="298"></canvas>
     </div>
   </div>
 </section>
-<section id="section1">
+<section>
   <div class="page-header">
-    <h3>Part 2</h3>
+    <h3>Text</h3>
   </div>
   <div class="row">
     <div class="span8">
