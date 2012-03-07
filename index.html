@@ -137,7 +137,7 @@
   </div>
   <div class="row">
     <div class="span8">
-      <div id="alert-clear-rectangle" class="alert alert-success"> </div>
+      <div id="alert-clear-rectangle" class="alert alert-success">-</div>
 
 <form class="prettyprint"><textarea class="coffeescript" data-alert="#alert-clear-rectangle">
 canvas = document.getElementById 'canvas-clear-rectangle'
@@ -169,7 +169,7 @@ if canvas.getContext
   </div>
   <div class="row">
     <div class="span8">
-      <div id="alert-stroke-rectangle" class="alert alert-success"> </div>
+      <div id="alert-stroke-rectangle" class="alert alert-success">-</div>
 
 <form class="prettyprint"><textarea class="coffeescript" data-alert="#alert-stroke-rectangle">
 canvas = document.getElementById 'canvas-stroke-rectangle'
@@ -197,14 +197,14 @@ if canvas.getContext
   </div>
   <div class="row">
     <div class="span8">
-      <div id="alert-fill-rectangle" class="alert alert-success"> </div>
+      <div id="alert-fill-rectangle" class="alert alert-success">-</div>
 
 <form class="prettyprint"><textarea class="coffeescript" data-alert="#alert-fill-rectangle">
 canvas = document.getElementById 'canvas-fill-rectangle'
 if canvas.getContext
   context = canvas.getContext '2d'
   context.clearRect(0, 0, canvas.width, canvas.height)
-  # ctx.fillStyle = "rgb(185,74,72)"
+  context.fillStyle = "rgb(185,74,72)"
   context.fillRect(74, 74, 150, 150)
 
 </textarea></form>
@@ -233,6 +233,69 @@ if canvas.getContext
         convallis orci a massa porttitor lacinia. Integer rhoncus dui non metus iaculis 
         feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <h3>context.strokeText(text, x, y [,maxWidth])</h3>
+      <p>
+        Text is great for literates.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <div id="alert-stroke-text" class="alert alert-success">-</div>
+
+<form class="prettyprint"><textarea class="coffeescript" data-alert="#alert-stroke-text">
+canvas = document.getElementById 'canvas-stroke-text'
+if canvas.getContext
+  context = canvas.getContext '2d'
+  midX = canvas.width/2
+  midY = canvas.height/2
+  context.clearRect(0, 0, canvas.width, canvas.height)
+  context.font = "32px Verdana"
+  context.textAlign = "center"
+  context.textBaseline = "middle"
+  context.strokeStyle = "rgb(4, 156, 219)"
+
+  context.strokeText("Hello World!", midX, midY)
+
+</textarea></form>
+
+    </div>
+    <div class="span4">
+      <div class="alert alert-info">#canvas-stroke-text</div>
+      <canvas id="canvas-stroke-text" height="298" width="298"></canvas>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <h3>context.fillText(text, x, y [, maxWidth])</h3>
+      <p>
+        Fill text is good too
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <div id="alert-fill-text" class="alert alert-success">-</div>
+
+<form class="prettyprint"><textarea class="coffeescript" data-alert="#alert-fill-text">
+canvas = document.getElementById 'canvas-fill-text'
+if canvas.getContext
+  context = canvas.getContext '2d'
+  context.clearRect(0, 0, canvas.width, canvas.height)
+  context.font = "24px Georgia"
+  context.fillStyle = "rgb(248, 148, 6)"
+  context.fillText("Hello World!", 50, 80)
+
+</textarea></form>
+
+    </div>
+    <div class="span4">
+      <div class="alert alert-info">#canvas-fill-text</div>
+      <canvas id="canvas-fill-text" height="298" width="298"></canvas>
     </div>
   </div>
 </section>
