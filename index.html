@@ -239,7 +239,7 @@ if canvas.getContext
   </div>
   <div class="row">
     <div class="span8">
-      <h3>context.strokeText(text, x, y [,maxWidth])</h3>
+      <h3>context.strokeText(text, x, y [, maxWidth])</h3>
       <p>
         Text is great for literates.
       </p>
@@ -253,9 +253,9 @@ if canvas.getContext
 canvas = document.getElementById 'canvas-stroke-text'
 if canvas.getContext
   context = canvas.getContext '2d'
+  context.clearRect(0, 0, canvas.width, canvas.height)
   midX = canvas.width/2
   midY = canvas.height/2
-  context.clearRect(0, 0, canvas.width, canvas.height)
   context.font = "32px Verdana"
   context.textAlign = "center"
   context.textBaseline = "middle"
