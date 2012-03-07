@@ -124,9 +124,46 @@
         Maecenas dui turpis, malesuada semper aliquam at, vestibulum sit amet
         augue. Etiam placerat volutpat urna in tristique.       
       </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span8">
+      <h3>context.clearRect(x, y, width, height)</h3>
+      <p>
+        It erases the canvas, yo.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <div id="alert-clear-rectangle" class="alert alert-success"> </div>
+
+<form class="prettyprint"><textarea class="coffeescript" data-alert="#alert-clear-rectangle">
+canvas = document.getElementById 'canvas-clear-rectangle'
+if canvas.getContext
+  context = canvas.getContext '2d'
+  context.clear = ->
+    @save()
+    @setTransform(1, 0, 0, 1, 0, 0)
+    @clearRect(0, 0, @canvas.width, @canvas.height)
+    @restore()
+
+  # clear as needed
+  context.clear()
+
+</textarea></form>
+    </div>
+    <div class="span4">
+      <div class="alert alert-info">#canvas-clear-rectangle</div>
+      <canvas id="canvas-clear-rectangle" height="298" width="298"></canvas>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8">
       <h3>context.strokeRect(x, y, width, height)</h3>
       <p>
-        A few words about it</p>
+        A few words about it
       </p>
     </div>
   </div>
@@ -137,8 +174,9 @@
 <form class="prettyprint"><textarea class="coffeescript" data-alert="#alert-stroke-rectangle">
 canvas = document.getElementById 'canvas-stroke-rectangle'
 if canvas.getContext
-  ctx = canvas.getContext '2d'
-  ctx.strokeRect(74, 109, 150, 80)
+  context = canvas.getContext '2d'
+  context.clearRect(0, 0, canvas.width, canvas.height)
+  context.strokeRect(74, 109, 150, 80)
 
 </textarea></form>
 
@@ -148,10 +186,12 @@ if canvas.getContext
       <canvas id="canvas-stroke-rectangle" height="298" width="298"></canvas>
     </div>
   </div>
+
   <div class="row">
     <div class="span8">
+      <h3>context.fillRect(x, y, width, height)</h3>
       <p>
-        More text
+        The filled rectangle is awesome.
       </p>
     </div>
   </div>
@@ -162,10 +202,10 @@ if canvas.getContext
 <form class="prettyprint"><textarea class="coffeescript" data-alert="#alert-fill-rectangle">
 canvas = document.getElementById 'canvas-fill-rectangle'
 if canvas.getContext
-  ctx = canvas.getContext '2d'
-  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  context = canvas.getContext '2d'
+  context.clearRect(0, 0, canvas.width, canvas.height)
   # ctx.fillStyle = "rgb(185,74,72)"
-  ctx.fillRect(74, 74, 150, 150)
+  context.fillRect(74, 74, 150, 150)
 
 </textarea></form>
 
@@ -191,13 +231,7 @@ if canvas.getContext
         eget luctus. Suspendisse tellus lectus, blandit nec elementum eget, tempor quis 
         metus. Nam purus nulla, sollicitudin in tempor et, molestie vel ante. Aliquam 
         convallis orci a massa porttitor lacinia. Integer rhoncus dui non metus iaculis 
-        feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque 
-        neque velit, laoreet nec commodo ut, cursus vel enim. Aenean facilisis, odio sed 
-        bibendum interdum, nunc diam faucibus eros, vel varius felis urna ac quam. Sed 
-        semper lorem at eros ornare eget accumsan nunc dapibus. Sed nisi urna, pretium 
-        eget mattis vel, euismod in odio. Fusce vulputate rhoncus diam quis blandit. 
-        Vestibulum mattis, turpis nec adipiscing consequat, diam tellus sagittis sapien, 
-        dictum aliquam mi orci dictum elit.
+        feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
     </div>
   </div>
