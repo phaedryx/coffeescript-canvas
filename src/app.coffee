@@ -20,13 +20,6 @@ coffeescriptOptions = {
   onKeyEvent: (editor, keyEvent) -> realTimeCompile(editor, $.event.fix(keyEvent))
 }
 
-htmlOptions = {
-  mode: 'html'
-  tabMode: 'indent'
-  tabSize: 2
-  lineNumbers: true
-}
-
 $(document).ready ->
   $("textarea.coffeescript").each ->
     editor = CodeMirror.fromTextArea($(this)[0], coffeescriptOptions)

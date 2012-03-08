@@ -1,5 +1,5 @@
 (function() {
-  var coffeescriptOptions, compile, htmlOptions, realTimeCompile;
+  var coffeescriptOptions, compile, realTimeCompile;
 
   compile = function(editor) {
     var alertDiv, javascript, source;
@@ -32,13 +32,6 @@
     onKeyEvent: function(editor, keyEvent) {
       return realTimeCompile(editor, $.event.fix(keyEvent));
     }
-  };
-
-  htmlOptions = {
-    mode: 'html',
-    tabMode: 'indent',
-    tabSize: 2,
-    lineNumbers: true
   };
 
   $(document).ready(function() {
