@@ -300,6 +300,42 @@ if canvas.getContext
       <canvas id="canvas-fill-text" height="298" width="298"></canvas>
     </div>
   </div>
+  <div class="row">
+    <div class="span8">
+      <h3>context.measureText(text)</h3>
+      <p>
+        How wide is the text?
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <div id="alert-measure-text">-</div>
+
+<form class="prettyprint"><textarea class="coffeescript" data-alert="#alert-measure-text">
+canvas = document.getElementById 'canvas-measure-text'
+if canvas.getContext
+  context = canvas.getContext '2d'
+  context.clearRect(0, 0, canvas.width, canvas.height)
+  midX = canvas.width/2
+  midY = canvas.height/2
+  context.font = "32pt Tahoma"
+  context.textAlign = "center"
+  context.textBaseline = "middle"
+  context.strokeStyle = "rgb(122, 67, 182)"
+  text = "Hello World!"
+  width = context.measureText(text).width
+  context.strokeText(text, midX, midY)
+  context.strokeRect(midX - width/2, midY - 32, width, 64)
+
+</textarea></form>
+
+    </div>
+    <div class="span4">
+      <div class="alert alert-info">#canvas-measure-text</div>
+      <canvas id="canvas-measure-text" height="298" width="298"></canvas>
+    </div>
+  </div>
 </section>
 
 <section id="images">
