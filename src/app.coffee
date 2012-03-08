@@ -4,9 +4,9 @@ compile = (editor) ->
   try
     javascript = CoffeeScript.compile(source, bare: on)
     eval javascript
-    $(alertDiv).html "<i class='icon-ok'></i> Successfully Compiled"
+    $(alertDiv).html "<div class='alert alert-success'><i class='icon-ok'></i> Successfully Compiled</div>"
   catch error
-    $(alertDiv).html "<i class='icon-exclamation-sign'></i> #{error}"
+    $(alertDiv).html "<div class='alert alert-error'><i class='icon-exclamation-sign'></i> #{error}</div>"
 
 realTimeCompile = (editor, keyEvent) ->
   return unless keyEvent.type is "keyup"

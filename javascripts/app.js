@@ -10,9 +10,9 @@
         bare: true
       });
       eval(javascript);
-      return $(alertDiv).html("<i class='icon-ok'></i> Successfully Compiled");
+      return $(alertDiv).html("<div class='alert alert-success'><i class='icon-ok'></i> Successfully Compiled</div>");
     } catch (error) {
-      return $(alertDiv).html("<i class='icon-exclamation-sign'></i> " + error);
+      return $(alertDiv).html("<div class='alert alert-error'><i class='icon-exclamation-sign'></i> " + error + "</div>");
     }
   };
 
