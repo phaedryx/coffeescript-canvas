@@ -76,8 +76,7 @@
         et dui eros. Etiam id ante eget sapien scelerisque tempus ut nec risus.
       </p>
       <p>
-        Nam <code>&lt;canvas height="200" width="200"&gt;&lt;/canvas&gt;</code>. 
-        Suspendisse rutrum semper
+        Nam <code>&lt;canvas height="200" width="200"&gt;&lt;/canvas&gt;</code>. Suspendisse rutrum semper
         magna, id adipiscing nisi vestibulum quis. Cras id elit quis mauris
         consequat tristique. Quisque sit amet augue sit amet lectus dapibus congue
         vel et justo. Mauris ac neque et leo tincidunt imperdiet. Nullam justo
@@ -166,7 +165,8 @@ if canvas.getContext
     <div class="span8">
       <h3>context.strokeRect(x, y, width, height)</h3>
       <p>
-        A few words about it
+        Creates a stroke (outline) rectangle of the specified width and height with 
+        an upper left corner at (x,y).
       </p>
     </div>
   </div>
@@ -228,13 +228,12 @@ if canvas.getContext
   <div class="row">
     <div class="span8">
       <p>
-        Nulla pharetra porttitor accumsan. Aenean iaculis faucibus ligula quis porta. 
-        Nulla sem nulla, ornare sed tempor feugiat, sollicitudin et massa. In elit enim, 
-        hendrerit non molestie quis, tristique a magna. Maecenas placerat gravida metus 
-        eget luctus. Suspendisse tellus lectus, blandit nec elementum eget, tempor quis 
-        metus. Nam purus nulla, sollicitudin in tempor et, molestie vel ante. Aliquam 
-        convallis orci a massa porttitor lacinia. Integer rhoncus dui non metus iaculis 
-        feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        The canvas allows you to render text to it line by line. There are many settings
+        that can be applied to the text.
+      </p>
+      <h3>context.font = "size font style, font default"</h3>
+      <p>
+
       </p>
     </div>
   </div>
@@ -242,7 +241,12 @@ if canvas.getContext
     <div class="span8">
       <h3>context.strokeText(text, x, y [, maxWidth])</h3>
       <p>
-        Text is great for literates.
+        The <span class="i">text</span> parameter is a string (which can include unicode
+        characters). The <span class="i">x,y</span> coordinates are the alignment point
+        of the text (which is the bottom left corner by default). The <span class="i">text</span>
+        will be scaled to be no wider than <span class="i">maxWidth</span> if it is
+        provided. The <span class="i">text</span> is rendered with the current stroke style
+        and font.
       </p>
     </div>
   </div>
@@ -276,7 +280,12 @@ if canvas.getContext
     <div class="span8">
       <h3>context.fillText(text, x, y [, maxWidth])</h3>
       <p>
-        Fill text is good too
+        The <span class="i">text</span> parameter is a string (which can include unicode
+        characters). The <span class="i">x,y</span> coordinates are the alignment point
+        of the text (which is the bottom left corner by default). The <span class="i">text</span>
+        will be scaled to be no wider than <span class="i">maxWidth</span> if it is
+        provided. The <span class="i">text</span> is rendered with the current fill style
+        and font.
       </p>
     </div>
   </div>
