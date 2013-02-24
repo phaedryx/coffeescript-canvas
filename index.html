@@ -39,11 +39,20 @@
         <li class="dropdown">
           <a id="drop-text" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Text <b class="caret"></b></a>
           <ul class="dropdown-menu" role="menu" aria-labelledby="drop-text">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-font">context.font</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-stroketext">context.strokeText()</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-filltext">context.fillText()</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-measuretext">context.measureText()</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a id="drop-paths" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Paths <b class="caret"></b></a>
           <ul class="dropdown-menu" role="menu" aria-labelledby="drop-paths">
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a id="drop-images" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Images <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop-images">
           </ul>
         </li>
         <li class="dropdown">
@@ -66,7 +75,6 @@
           <ul class="dropdown-menu" role="menu" aria-labelledby="drop-animation">
           </ul>
         </li>
-        <li><a href="#acknowledgments">Acknowledgements</a></li>
       </ul>
     </div>
   </div>
@@ -94,7 +102,9 @@
 
 <section id="canvas-element">
   <div class="row"></div>
-  <h2>The Canvas Element</h2>
+  <div class="page-header">
+    <h2>The Canvas Element</h2>
+  </div>
   <div class="row">
     <div class="span8">
       <p>
@@ -146,7 +156,9 @@
 
 <section id="rectangles">
   <div class="row"></div>
-  <h2>Rectangles</h2>
+  <div class="page-header">
+    <h2>Rectangles</h2>
+  </div>
   <div class="row">
     <div class="span8">
       <p> 
@@ -265,17 +277,31 @@ if canvas.getContext
   </div>
   <div class="row">
     <div class="span8">
-      <p>
-        The canvas allows you to render text to it line by line. There are many settings
-        that can be applied to the text.
+      <p> 
+        Quisque ut dolor justo, eget molestie dui. Sed convallis laoreet aliquet.
+        In ac neque sit amet sem vehicula varius eget et velit. Fusce lobortis
+        feugiat nunc sed condimentum. In molestie, turpis id consequat varius,
+        massa tortor congue ante, pellentesque vestibulum dui augue nec tellus.
+        Duis lacus lacus, pulvinar eu ornare sed, ornare sit amet nulla.
+        Pellentesque dignissim faucibus ipsum, at malesuada  velit pretium in.
+        Sed lobortis tempus felis nec ultricies. Nullam arcu libero, molestie
+        vitae auctor et, fringilla at lacus. Vivamus ac erat orci, in lacinia
+        metus. Integer aliquam venenatis adipiscing. Mauris faucibus dui odio, at
+        convallis dui. Vivamus porttitor arcu ut turpis pharetra tincidunt.
+        Maecenas dui turpis, malesuada semper aliquam at, vestibulum sit amet
+        augue. Etiam placerat volutpat urna in tristique.       
       </p>
+    </div>
+  </div>
+  <div class="row" id="context-font">
+    <div class="span8">
       <h3>context.font = "size font style, font default"</h3>
       <p>
         The <span class="i">font</span> 
       </p>
     </div>
   </div>
-  <div class="row">
+  <div class="row" id="context-stroketext">
     <div class="span8">
       <h3>context.strokeText(text, x, y [, maxWidth])</h3>
       <p>
@@ -314,7 +340,7 @@ if canvas.getContext
       <canvas id="canvas-stroke-text" height="298" width="298"></canvas>
     </div>
   </div>
-  <div class="row">
+  <div class="row" id="context-filltext">
     <div class="span8">
       <h3>context.fillText(text, x, y [, maxWidth])</h3>
       <p>
@@ -348,7 +374,7 @@ if canvas.getContext
       <canvas id="canvas-fill-text" height="298" width="298"></canvas>
     </div>
   </div>
-  <div class="row">
+  <div class="row" id="context-measuretext">
     <div class="span8">
       <h3>context.measureText(text)</h3>
       <p>
@@ -384,6 +410,32 @@ if canvas.getContext
     <div class="span4">
       <div class="alert alert-info">#canvas-measure-text</div>
       <canvas id="canvas-measure-text" height="298" width="298"></canvas>
+    </div>
+  </div>
+</section>
+
+<section id="paths">
+  <div class="row"></div>
+  <div class="page-header">
+    <h2>Paths</h2>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <p>
+        Nulla pharetra porttitor accumsan. Aenean iaculis faucibus ligula quis porta. 
+        Nulla sem nulla, ornare sed tempor feugiat, sollicitudin et massa. In elit enim, 
+        hendrerit non molestie quis, tristique a magna. Maecenas placerat gravida metus 
+        eget luctus. Suspendisse tellus lectus, blandit nec elementum eget, tempor quis 
+        metus. Nam purus nulla, sollicitudin in tempor et, molestie vel ante. Aliquam 
+        convallis orci a massa porttitor lacinia. Integer rhoncus dui non metus iaculis 
+        feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque 
+        neque velit, laoreet nec commodo ut, cursus vel enim. Aenean facilisis, odio sed 
+        bibendum interdum, nunc diam faucibus eros, vel varius felis urna ac quam. Sed 
+        semper lorem at eros ornare eget accumsan nunc dapibus. Sed nisi urna, pretium 
+        eget mattis vel, euismod in odio. Fusce vulputate rhoncus diam quis blandit. 
+        Vestibulum mattis, turpis nec adipiscing consequat, diam tellus sagittis sapien, 
+        dictum aliquam mi orci dictum elit.
+      </p>
     </div>
   </div>
 </section>
@@ -458,32 +510,6 @@ if canvas.getContext
         adipiscing purus. Ut a tellus nulla, imperdiet semper felis. Vestibulum
         et dui eros. Etiam id ante eget sapien scelerisque tempus ut nec risus.
       </p>
-      <p>
-        Nam viverra velit quis turpis vehicula commodo. Suspendisse rutrum semper
-        magna, id adipiscing nisi vestibulum quis. Cras id elit quis mauris
-        consequat tristique. Quisque sit amet augue sit amet lectus dapibus congue
-        vel et justo. Mauris ac neque et leo tincidunt imperdiet. Nullam justo
-        metus, tincidunt vitae tempor vel, aliquam quis massa. Fusce quis lectus
-        vulputate arcu interdum sollicitudin. Cum sociis natoque penatibus et
-        magnis dis parturient montes, nascetur ridiculus mus. Mauris et vulputate
-        nisi. Aenean tempor, diam vitae pharetra rutrum, dui felis varius justo,
-        at tristique libero odio in dolor. Nulla ante elit, porta quis
-        pellentesque bibendum, dictum ac nibh.
-      </p>
-      </p>  
-        Quisque ut dolor justo, eget molestie dui. Sed convallis laoreet aliquet.
-        In ac neque sit amet sem vehicula varius eget et velit. Fusce lobortis
-        feugiat nunc sed condimentum. In molestie, turpis id consequat varius,
-        massa tortor congue ante, pellentesque vestibulum dui augue nec tellus.
-        Duis lacus lacus, pulvinar eu ornare sed, ornare sit amet nulla.
-        Pellentesque dignissim faucibus ipsum, at malesuada  velit pretium in.
-        Sed lobortis tempus felis nec ultricies. Nullam arcu libero, molestie
-        vitae auctor et, fringilla at lacus. Vivamus ac erat orci, in lacinia
-        metus. Integer aliquam venenatis adipiscing. Mauris faucibus dui odio, at
-        convallis dui. Vivamus porttitor arcu ut turpis pharetra tincidunt.
-        Maecenas dui turpis, malesuada semper aliquam at, vestibulum sit amet
-        augue. Etiam placerat volutpat urna in tristique.       
-      </p>
     </div>
   </div>
 </section>
@@ -509,31 +535,30 @@ if canvas.getContext
         adipiscing purus. Ut a tellus nulla, imperdiet semper felis. Vestibulum
         et dui eros. Etiam id ante eget sapien scelerisque tempus ut nec risus.
       </p>
+    </div>
+  </div>
+</section>
+
+<section id="animations">
+  <div class="row"></div>
+  <div class="page-header">
+    <h2>Animations</h2>
+  </div>
+  <div class="row">
+    <div class="span8">
       <p>
-        Nam viverra velit quis turpis vehicula commodo. Suspendisse rutrum semper
-        magna, id adipiscing nisi vestibulum quis. Cras id elit quis mauris
-        consequat tristique. Quisque sit amet augue sit amet lectus dapibus congue
-        vel et justo. Mauris ac neque et leo tincidunt imperdiet. Nullam justo
-        metus, tincidunt vitae tempor vel, aliquam quis massa. Fusce quis lectus
-        vulputate arcu interdum sollicitudin. Cum sociis natoque penatibus et
-        magnis dis parturient montes, nascetur ridiculus mus. Mauris et vulputate
-        nisi. Aenean tempor, diam vitae pharetra rutrum, dui felis varius justo,
-        at tristique libero odio in dolor. Nulla ante elit, porta quis
-        pellentesque bibendum, dictum ac nibh.
-      </p>
-      </p>  
-        Quisque ut dolor justo, eget molestie dui. Sed convallis laoreet aliquet.
-        In ac neque sit amet sem vehicula varius eget et velit. Fusce lobortis
-        feugiat nunc sed condimentum. In molestie, turpis id consequat varius,
-        massa tortor congue ante, pellentesque vestibulum dui augue nec tellus.
-        Duis lacus lacus, pulvinar eu ornare sed, ornare sit amet nulla.
-        Pellentesque dignissim faucibus ipsum, at malesuada  velit pretium in.
-        Sed lobortis tempus felis nec ultricies. Nullam arcu libero, molestie
-        vitae auctor et, fringilla at lacus. Vivamus ac erat orci, in lacinia
-        metus. Integer aliquam venenatis adipiscing. Mauris faucibus dui odio, at
-        convallis dui. Vivamus porttitor arcu ut turpis pharetra tincidunt.
-        Maecenas dui turpis, malesuada semper aliquam at, vestibulum sit amet
-        augue. Etiam placerat volutpat urna in tristique.       
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi arcu,
+        dignissim in accumsan et, aliquet at nisi. Duis vel nulla sit amet purus
+        lobortis adipiscing et eget massa. Morbi venenatis aliquam risus at
+        faucibus. Morbi ut purus vulputate neque tincidunt cursus at in lectus.
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+        ridiculus mus. Phasellus non elit sit amet nunc laoreet elementum vel nec
+        lorem. Aliquam ut tortor velit, sed gravida magna. Ut porta mollis neque
+        et faucibus. Vestibulum ipsum sem, interdum ut semper et, rutrum at erat.
+        Aliquam at feugiat urna. Phasellus vitae ipsum erat, a rhoncus mauris.
+        Etiam eget velit nec diam tempor imperdiet. Nam et arcu velit, sit amet
+        adipiscing purus. Ut a tellus nulla, imperdiet semper felis. Vestibulum
+        et dui eros. Etiam id ante eget sapien scelerisque tempus ut nec risus.
       </p>
     </div>
   </div>
@@ -546,6 +571,7 @@ if canvas.getContext
   <div class="row">
     <div class="span8">
       <p>
+        bootstrap<br>
         codemirror<br>
         smooth coffeescript
       </p>
