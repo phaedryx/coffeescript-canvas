@@ -20,16 +20,53 @@
     <div class="container">
       <ul class="nav btn-nav">
         <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#canvas-element">The Canvas Element</a></li>
-        <li><a href="#rectangles">Rectangles</a></li>
-        <li><a href="#text">Text</a></li>
-        <li><a href="#images">Images</a></li>
-        <li><a href="#lines">Lines</a></li>
-        <li><a href="#curves">Curves</a></li>
-        <li><a href="#effects">Effects</a></li>
-        <li><a href="#transformations">Transformations</a></li>
-        <li><a href="#composites">Composites</a></li>
-        <li><a href="#acknowledgments">Acknowledgments</a></li>
+        <li class="dropdown">
+          <a id="drop-canvas" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Canvas <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop-canvas">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#canvas-width">canvas.width</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#canvas-height">canvas.height</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#canvas-getcontext">canvas.getContext()</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a id="drop-rectangles" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Rectangles <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop-rectangles">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-clearrect">context.clearRect()</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-strokerect">context.strokeRect()</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-fillrect">context.fillRect()</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a id="drop-text" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Text <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop-text">
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a id="drop-paths" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Paths <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop-paths">
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a id="drop-effects" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Effects <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop-effects">
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a id="drop-transformations" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Transformations <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop-transformations">
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a id="drop-composites" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Composites <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop-composites">
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a id="drop-animation" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Animation <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop-animation">
+          </ul>
+        </li>
+        <li><a href="#acknowledgments">Acknowledgements</a></li>
       </ul>
     </div>
   </div>
@@ -57,9 +94,7 @@
 
 <section id="canvas-element">
   <div class="row"></div>
-  <div class="page-header">
-    <h2>The Canvas Element</h2>
-  </div>
+  <h2>The Canvas Element</h2>
   <div class="row">
     <div class="span8">
       <p>
@@ -80,31 +115,30 @@
         <code>&lt;canvas height="200" width="200"&gt;</code><br>
         This text is displayed if the browser doesn't support the canvas tag.<br>
         <code>&lt;/canvas&gt;</code>.<br>
-
-        Suspendisse rutrum semper
-        magna, id adipiscing nisi vestibulum quis. Cras id elit quis mauris
-        consequat tristique. Quisque sit amet augue sit amet lectus dapibus congue
-        vel et justo. Mauris ac neque et leo tincidunt imperdiet. Nullam justo
-        metus, tincidunt vitae tempor vel, aliquam quis massa. Fusce quis lectus
-        vulputate arcu interdum sollicitudin. Cum sociis natoque penatibus et
-        magnis dis parturient montes, nascetur ridiculus mus. Mauris et vulputate
-        nisi. Aenean tempor, diam vitae pharetra rutrum, dui felis varius justo,
-        at tristique libero odio in dolor. Nulla ante elit, porta quis
-        pellentesque bibendum, dictum ac nibh.
       </p>
-      </p>  
-        Quisque ut dolor justo, eget molestie dui. Sed convallis laoreet aliquet.
-        In ac neque sit amet sem vehicula varius eget et velit. Fusce lobortis
-        feugiat nunc sed condimentum. In molestie, turpis id consequat varius,
-        massa tortor congue ante, pellentesque vestibulum dui augue nec tellus.
-        Duis lacus lacus, pulvinar eu ornare sed, ornare sit amet nulla.
-        Pellentesque dignissim faucibus ipsum, at malesuada  velit pretium in.
-        Sed lobortis tempus felis nec ultricies. Nullam arcu libero, molestie
-        vitae auctor et, fringilla at lacus. Vivamus ac erat orci, in lacinia
-        metus. Integer aliquam venenatis adipiscing. Mauris faucibus dui odio, at
-        convallis dui. Vivamus porttitor arcu ut turpis pharetra tincidunt.
-        Maecenas dui turpis, malesuada semper aliquam at, vestibulum sit amet
-        augue. Etiam placerat volutpat urna in tristique.       
+    </div>
+  </div>
+  <div class="row" id="canvas-width">
+    <div class="span8">
+      <h3>canvas.width</h3>
+      <p>
+        returns the width
+      </p>
+    </div>
+  </div>
+  <div class="row" id="canvas-height">
+    <div class="span8">
+      <h3>canvas.height</h3>
+      <p>
+        returns the height
+      </p>
+    </div>
+  </div>
+  <div class="row" id="canvas-getcontext">
+    <div class="span8">
+      <h3>canvas.getContext(contextId)</h3>
+      <p>
+        returns the height
       </p>
     </div>
   </div>
@@ -112,9 +146,7 @@
 
 <section id="rectangles">
   <div class="row"></div>
-  <div class="page-header">
-    <h2>Rectangles</h2>
-  </div>
+  <h2>Rectangles</h2>
   <div class="row">
     <div class="span8">
       <p> 
@@ -134,7 +166,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" id="context-clearrect">
     <div class="span8">
       <h3>context.clearRect(x, y, width, height)</h3>
       <p>
@@ -160,13 +192,14 @@ if canvas.getContext
   context.clear()
 
 </textarea></form>
+
     </div>
     <div class="span4">
       <div class="alert alert-info">#canvas-clear-rectangle</div>
       <canvas id="canvas-clear-rectangle" height="298" width="298"></canvas>
     </div>
   </div>
-  <div class="row">
+  <div class="row" id="context-strokerect">
     <div class="span8">
       <h3>context.strokeRect(x, y, width, height)</h3>
       <p>
@@ -195,7 +228,7 @@ if canvas.getContext
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" id="context-fillrect">
     <div class="span8">
       <h3>context.fillRect(x, y, width, height)</h3>
       <p>
@@ -381,56 +414,6 @@ if canvas.getContext
   </div>
 </section>
 
-<section id="lines">
-  <div class="row"></div>
-  <div class="page-header">
-    <h2>Lines</h2>
-  </div>
-  <div class="row">
-    <div class="span8">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi arcu,
-        dignissim in accumsan et, aliquet at nisi. Duis vel nulla sit amet purus
-        lobortis adipiscing et eget massa. Morbi venenatis aliquam risus at
-        faucibus. Morbi ut purus vulputate neque tincidunt cursus at in lectus.
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Phasellus non elit sit amet nunc laoreet elementum vel nec
-        lorem. Aliquam ut tortor velit, sed gravida magna. Ut porta mollis neque
-        et faucibus. Vestibulum ipsum sem, interdum ut semper et, rutrum at erat.
-        Aliquam at feugiat urna. Phasellus vitae ipsum erat, a rhoncus mauris.
-        Etiam eget velit nec diam tempor imperdiet. Nam et arcu velit, sit amet
-        adipiscing purus. Ut a tellus nulla, imperdiet semper felis. Vestibulum
-        et dui eros. Etiam id ante eget sapien scelerisque tempus ut nec risus.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="curves">
-  <div class="row"></div>
-  <div class="page-header">
-    <h2>Curves</h2>
-  </div>
-  <div class="row">
-    <div class="span8">
-      </p>  
-        Quisque ut dolor justo, eget molestie dui. Sed convallis laoreet aliquet.
-        In ac neque sit amet sem vehicula varius eget et velit. Fusce lobortis
-        feugiat nunc sed condimentum. In molestie, turpis id consequat varius,
-        massa tortor congue ante, pellentesque vestibulum dui augue nec tellus.
-        Duis lacus lacus, pulvinar eu ornare sed, ornare sit amet nulla.
-        Pellentesque dignissim faucibus ipsum, at malesuada  velit pretium in.
-        Sed lobortis tempus felis nec ultricies. Nullam arcu libero, molestie
-        vitae auctor et, fringilla at lacus. Vivamus ac erat orci, in lacinia
-        metus. Integer aliquam venenatis adipiscing. Mauris faucibus dui odio, at
-        convallis dui. Vivamus porttitor arcu ut turpis pharetra tincidunt.
-        Maecenas dui turpis, malesuada semper aliquam at, vestibulum sit amet
-        augue. Etiam placerat volutpat urna in tristique.       
-      </p>
-    </div>
-  </div>
-</section>
-
 <section id="effects">
   <div class="row"></div>
   <div class="page-header">
@@ -576,7 +559,7 @@ if canvas.getContext
   </div>
   <div class="row">
     <div class="span8">
-This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" rel="dct:type">work</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" rel="dct:type">work</span> is licensed by Tad Thorley under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
     </div>
     <div class="span4">
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>
