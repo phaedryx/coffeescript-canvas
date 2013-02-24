@@ -25,7 +25,9 @@
           <ul class="dropdown-menu" role="menu" aria-labelledby="drop-canvas">
             <li role="presentation"><a role="menuitem" tabindex="-1" href="#canvas-width">canvas.width</a></li>
             <li role="presentation"><a role="menuitem" tabindex="-1" href="#canvas-height">canvas.height</a></li>
+            <li role="presentation" class="divider"></li>
             <li role="presentation"><a role="menuitem" tabindex="-1" href="#canvas-getcontext">canvas.getContext()</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-drawimage">context.drawImage()</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -40,6 +42,9 @@
           <a id="drop-text" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Text <b class="caret"></b></a>
           <ul class="dropdown-menu" role="menu" aria-labelledby="drop-text">
             <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-font">context.font</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-textalign">context.textAlign</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-textbaseline">context.textBaseline</a></li>
+            <li role="presentation" class="divider"></li>
             <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-stroketext">context.strokeText()</a></li>
             <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-filltext">context.fillText()</a></li>
             <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-measuretext">context.measureText()</a></li>
@@ -48,11 +53,11 @@
         <li class="dropdown">
           <a id="drop-paths" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Paths <b class="caret"></b></a>
           <ul class="dropdown-menu" role="menu" aria-labelledby="drop-paths">
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a id="drop-images" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Images <b class="caret"></b></a>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="drop-images">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-moveto">context.moveTo()</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-lineto">context.lineTo()</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-arc">context.arc()</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-quadraticcurveto">context.quadraticCurveTo()</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#context-beziercurveto">context.bezierCurveTo()</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -75,6 +80,7 @@
           <ul class="dropdown-menu" role="menu" aria-labelledby="drop-animation">
           </ul>
         </li>
+        <li><a href="#acknowledgements">Acknowledgements</a></li>
       </ul>
     </div>
   </div>
@@ -440,32 +446,6 @@ if canvas.getContext
   </div>
 </section>
 
-<section id="images">
-  <div class="row"></div>
-  <div class="page-header">
-    <h2>Images</h2>
-  </div>
-  <div class="row">
-    <div class="span8">
-      <p>
-        Nulla pharetra porttitor accumsan. Aenean iaculis faucibus ligula quis porta. 
-        Nulla sem nulla, ornare sed tempor feugiat, sollicitudin et massa. In elit enim, 
-        hendrerit non molestie quis, tristique a magna. Maecenas placerat gravida metus 
-        eget luctus. Suspendisse tellus lectus, blandit nec elementum eget, tempor quis 
-        metus. Nam purus nulla, sollicitudin in tempor et, molestie vel ante. Aliquam 
-        convallis orci a massa porttitor lacinia. Integer rhoncus dui non metus iaculis 
-        feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque 
-        neque velit, laoreet nec commodo ut, cursus vel enim. Aenean facilisis, odio sed 
-        bibendum interdum, nunc diam faucibus eros, vel varius felis urna ac quam. Sed 
-        semper lorem at eros ornare eget accumsan nunc dapibus. Sed nisi urna, pretium 
-        eget mattis vel, euismod in odio. Fusce vulputate rhoncus diam quis blandit. 
-        Vestibulum mattis, turpis nec adipiscing consequat, diam tellus sagittis sapien, 
-        dictum aliquam mi orci dictum elit.
-      </p>
-    </div>
-  </div>
-</section>
-
 <section id="effects">
   <div class="row"></div>
   <div class="page-header">
@@ -564,7 +544,7 @@ if canvas.getContext
   </div>
 </section>
 
-<section id="acknowledgments">
+<section id="acknowledgements">
   <div class="page-header">
     <h2>Acknowledgments</h2>
   </div>
